@@ -1,0 +1,100 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-08T22:54:25-03:00",
+  "title": "Design System: Igreja Renascer em Cristo — Mogi das Cruzes",
+  "extensions": {
+    "colorMeta": {
+      "indigo-deep": { "role": "primary", "displayName": "Deep Indigo", "canonical": "#14133a", "tonalRamp": ["#09081c", "#14133a", "#29275a", "#464477", "#696795", "#9290b2", "#bebdce", "#ececf2"] },
+      "ink": { "role": "neutral", "displayName": "Ink", "canonical": "#171637", "tonalRamp": ["#0a091b", "#171637", "#2d2c55", "#4b496f", "#706e8e", "#9997ac", "#c4c3d0", "#eeeef3"] },
+      "cobalt": { "role": "primary", "displayName": "Cobalt", "canonical": "#394ee8", "tonalRamp": ["#111744", "#1b266e", "#2939a8", "#394ee8", "#6878ee", "#98a3f4", "#c7cdf9", "#eff1fe"] },
+      "coral": { "role": "secondary", "displayName": "Coral", "canonical": "#ef6255", "tonalRamp": ["#461c18", "#722d27", "#ae453b", "#ef6255", "#f4887e", "#f8afa8", "#fbd5d1", "#fef2f1"] },
+      "marigold": { "role": "secondary", "displayName": "Marigold", "canonical": "#f2b838", "tonalRamp": ["#473610", "#745819", "#af8428", "#f2b838", "#f5ca67", "#f8db96", "#fbecc5", "#fef8e9"] },
+      "mineral-paper": { "role": "neutral", "displayName": "Mineral Paper", "canonical": "#f2f4f3", "tonalRamp": ["#202422", "#3e4441", "#626966", "#89908d", "#afb5b2", "#d1d5d3", "#e6e9e7", "#f2f4f3"] }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Display", "purpose": "Hero statements only." },
+      "headline": { "displayName": "Headline", "purpose": "Section openings." },
+      "body": { "displayName": "Body", "purpose": "General reading copy." },
+      "label": { "displayName": "Label", "purpose": "Short status and location markers." }
+    },
+    "shadows": [
+      { "name": "framed-plane", "value": "18px 22px 46px rgba(23,22,55,.1)", "purpose": "Places the hero construction above the page field." },
+      { "name": "raised-control", "value": "0 10px 24px rgba(20,19,58,.18)", "purpose": "Separates primary actions from saturated fields." }
+    ],
+    "motion": [
+      { "name": "crossing-enter", "value": "0.85s cubic-bezier(.16,1,.3,1)", "purpose": "Coordinates the hero bands once on entry." },
+      { "name": "state-fast", "value": "0.2s ease-out", "purpose": "Navigation, focus-adjacent, and hover state changes." }
+    ],
+    "breakpoints": [
+      { "name": "navigation-collapse", "value": "920px" },
+      { "name": "single-column", "value": "680px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Notched institutional action used for the primary WhatsApp path.",
+      "html": "<a class=\"ds-button-primary\" href=\"#\">Conversar no WhatsApp <svg aria-hidden=\"true\" viewBox=\"0 0 20 20\"><path d=\"M4 16 16 4M7 4h9v9\"/></svg></a>",
+      "css": ".ds-button-primary{display:inline-flex;align-items:center;justify-content:space-between;min-height:54px;padding:.85rem 1rem .85rem 1.25rem;gap:1.4rem;color:#fff;background:#14133a;font:750 1rem 'Bricolage Grotesque',sans-serif;text-decoration:none;clip-path:polygon(0 0,calc(100% - 15px) 0,100% 15px,100% 100%,0 100%);transition:transform .2s ease-out,background-color .2s ease-out}.ds-button-primary svg{width:1.2rem;fill:none;stroke:currentColor;stroke-width:1.7}.ds-button-primary:hover{background:#394ee8;transform:translateY(-3px)}.ds-button-primary:focus-visible{outline:3px solid #f2b838;outline-offset:4px}"
+    },
+    {
+      "name": "Light Button",
+      "kind": "button",
+      "refersTo": "button-light",
+      "description": "High-contrast action for cobalt or indigo fields.",
+      "html": "<a class=\"ds-button-light\" href=\"#\">Pedir informações</a>",
+      "css": ".ds-button-light{display:inline-flex;align-items:center;min-height:54px;padding:.85rem 1.25rem;color:#14133a;background:#fff;font:750 1rem 'Bricolage Grotesque',sans-serif;text-decoration:none;clip-path:polygon(0 0,calc(100% - 15px) 0,100% 15px,100% 100%,0 100%);transition:transform .2s ease-out,background-color .2s ease-out}.ds-button-light:hover{background:#f2b838;transform:translateY(-3px)}.ds-button-light:focus-visible{outline:3px solid #f2b838;outline-offset:4px}"
+    },
+    {
+      "name": "Pending Information Panel",
+      "kind": "card",
+      "description": "Truth-state container for institutional details awaiting confirmation.",
+      "html": "<section class=\"ds-pending\"><h3>Informações em confirmação</h3><p><span aria-hidden=\"true\"></span> Endereço da igreja</p></section>",
+      "css": ".ds-pending{max-width:28rem;padding:2rem;color:#171637;background:#f2f4f3;font-family:'Bricolage Grotesque',sans-serif;clip-path:polygon(0 0,calc(100% - 24px) 0,100% 24px,100% 100%,0 100%)}.ds-pending h3{margin:0 0 1.2rem;font-size:1.5rem}.ds-pending p{display:flex;align-items:center;gap:.8rem;margin:0;padding:.72rem 0;border-bottom:1px solid #cbc8bc;font-weight:650}.ds-pending span{width:.75rem;height:.75rem;border:2px solid #ef6255}"
+    },
+    {
+      "name": "Masthead Navigation",
+      "kind": "nav",
+      "description": "Deep-indigo wayfinding with underline feedback and an emphasized contact action.",
+      "html": "<nav class=\"ds-nav\"><a href=\"#\">Boas-vindas</a><a href=\"#\">Propósito</a><a class=\"ds-nav-action\" href=\"#\">WhatsApp</a></nav>",
+      "css": ".ds-nav{display:flex;align-items:center;gap:1.2rem;padding:.75rem 1rem;background:#14133a;font-family:'Bricolage Grotesque',sans-serif}.ds-nav a{display:inline-flex;align-items:center;min-height:44px;color:#e9e7f1;font-size:.86rem;font-weight:600;text-underline-offset:.3em}.ds-nav a:hover{text-decoration-color:#f2b838}.ds-nav a:focus-visible{outline:3px solid #f2b838;outline-offset:4px}.ds-nav .ds-nav-action{padding:.65rem 1rem;color:#14133a;background:#f2b838;text-decoration:none;clip-path:polygon(0 0,88% 0,100% 28%,100% 100%,0 100%)}"
+    },
+    {
+      "name": "Woven Field",
+      "kind": "custom",
+      "description": "Signature abstract construction of four crossing color bands.",
+      "html": "<div class=\"ds-weave\" aria-hidden=\"true\"><i></i><i></i><i></i><i></i><strong>presença + encontro</strong></div>",
+      "css": ".ds-weave{position:relative;width:22rem;height:18rem;overflow:hidden;border:1px solid #171637;background:#fff}.ds-weave i{position:absolute;display:block}.ds-weave i:nth-child(1){inset:5% auto 4% 24%;width:14%;background:#ef6255;transform:skewY(-17deg)}.ds-weave i:nth-child(2){top:36%;right:-2%;left:-2%;height:12%;background:#f2b838;transform:rotate(11deg)}.ds-weave i:nth-child(3){inset:0 22% 0 auto;width:12%;background:#394ee8;transform:skewY(13deg)}.ds-weave i:nth-child(4){top:61%;right:3%;left:7%;height:5%;background:#14133a;transform:rotate(-9deg)}.ds-weave strong{position:absolute;top:40%;left:50%;padding:1rem;color:#fff;background:#14133a;font:700 .9rem 'Bricolage Grotesque',sans-serif;transform:translate(-50%,-50%) rotate(-3deg)}"
+    }
+  ],
+  "narrative": {
+    "northStar": "Fios de encontro",
+    "overview": "The system uses intersecting bands as a durable language for presence, encounter, and clear routes. Large typographic statements sit beside constructed abstract fields rather than stock religious imagery. The overall tone is contemporary and institutional, with calm reading surfaces punctuated by decisive color.",
+    "keyCharacteristics": [
+      "High-contrast indigo and cobalt fields balanced by cool mineral white.",
+      "Coral and marigold bands used as structural intersections.",
+      "Oversized, tightly set Bricolage Grotesque headlines.",
+      "Mostly square geometry with one clipped upper-right notch.",
+      "Explicit status language for pending or unconfirmed information."
+    ],
+    "rules": [
+      { "name": "The Field Rule", "body": "Color owns complete regions or intersecting bands; it is not sprinkled as disconnected decoration.", "section": "colors" },
+      { "name": "The Truth-State Rule", "body": "Pending information is signaled with coral outlined squares and plain language, never hidden in low-contrast fine print.", "section": "colors" },
+      { "name": "The Short-Line Rule", "body": "Display copy stays compact and balanced; body copy carries explanation at a calmer measure.", "section": "typography" }
+    ],
+    "dos": [
+      "Do use full color fields and deliberate overlap to create hierarchy.",
+      "Do preserve cool pale grounds, strong contrast, and visible keyboard focus.",
+      "Do use the clipped notch sparingly on primary actions or explicit status planes.",
+      "Do keep unconfirmed institutional details visibly marked as pending."
+    ],
+    "donts": [
+      "Don't present the three-bar brand treatment as an approved church logo.",
+      "Don't add stock church imagery, ornamental stained-glass effects, gradients, or decorative religious symbols without approved assets.",
+      "Don't turn content into rows of interchangeable rounded cards.",
+      "Don't reduce labels or interactive copy below the established legibility floor."
+    ]
+  }
+}
